@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BetProtector - Protect Your Pocket</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background: #f4f6f9;
+      color: #333;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      padding: 60px 20px;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.1rem;
+      color: #555;
+    }
+    .features, .cta {
+      max-width: 900px;
+      margin: 40px auto;
+      text-align: center;
+    }
+    .features h2, .cta h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+    .features ul {
+      list-style: none;
+      padding: 0;
+    }
+    .features li {
+      background: #fff;
+      padding: 15px;
+      margin: 10px auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .cta input[type="email"] {
+      padding: 10px;
+      width: 250px;
+      margin-right: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .cta button {
+      padding: 10px 20px;
+      background: #2a7be4;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .cta button:hover {
+      background: #165ec9;
+    }
+    .success-message {
+      margin-top: 15px;
+      color: green;
+      font-size: 1rem;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+      padding: 40px 20px 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>BetProtector</h1>
+    <p>Protect your pocket. Control your play. An emotion-aware betting control app built for Africa.</p>
+  </header>
+
+  <section class="features">
+    <h2>Why BetProtector?</h2>
+    <ul>
+      <li>📈 Real-time heart rate monitoring for emotional detection</li>
+      <li>⏳ Cool-down timers and session limits</li>
+      <li>🔒 Daily/weekly betting loss caps</li>
+      <li>🚫 Lockout feature once spending exceeds set limit</li>
+      <li>📊 Personalized analytics and recovery dashboard</li>
+      <li>🤝 Accountability partner support and notifications</li>
+    </ul>
+  </section>
+
+  <section class="cta">
+    <h2>Join the Movement</h2>
+    <p>Be the first to test BetProtector and take control of your betting habits.</p>
+    <form id="signup-form">
+      <input type="email" id="email" placeholder="Enter your email" required />
+      <button type="submit">Notify Me</button>
+    </form>
+    <div class="success-message" id="success-message" style="display: none;">Thank you! We'll keep you posted.</div>
+  </section>
+
+  <footer>
+    &copy; 2025 BetProtector.ng — Built for responsible bettors in Africa.
+  </footer>
+
+  <script>
+    document.getElementById("signup-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const emailInput = document.getElementById("email");
+      const message = document.getElementById("success-message");
+
+      if (emailInput.value.trim() !== "") {
+        message.style.display = "block";
+        emailInput.value = "";
+      }
+    });
+  </script>
+</body>
+</html>
+
